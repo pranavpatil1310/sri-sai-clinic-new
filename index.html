@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Sai Skin & Hair Clinic | Hospet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="patient-site">
+
+  <div class="role-nav">
+    <span><strong>Active View:</strong> Public Patient Website</span>
+    <div class="role-links">
+      <a href="index.html" class="active">Patient Site</a>
+      <a href="receptionist.html">Receptionist</a>
+      <a href="doctor.html">Doctor Portal (Admin)</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="brand">
+      <img src="WhatsApp Image 2026-09-27 at 5.12.36 PM.jpeg" class="brand-logo-circle" alt="Sri Sai Clinic Logo" />
+      <div>
+        <h1>Sri Sai Skin & Hair Clinic</h1>
+        <p>Hospet-583201 • Complete Skin, Hair & Laser Solutions</p>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Treatments</a>
+      <a href="#premises">Hospital & Hygiene</a>
+      <a href="#results">Results</a>
+      <a href="#doctors">Specialists</a>
+      <a href="#location">Contact</a>
+      <a href="#book" class="btn-header">Book Appointment</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Promotional Billboard -->
+    <section class="clinic-ad-banner">
+      <div>
+        <span style="background: rgba(255,255,255,0.2); font-size:0.75rem; text-transform:uppercase; padding:4px 10px; border-radius:50px; font-weight:700;">Hospital-Grade Laser Center</span>
+        <h2 style="margin-top: 10px;">Experience Flawless Skin & Healthy Hair in a 100% Sterile Environment</h2>
+        <p>Combining world-class dermatology technology—including FDA-Certified Artemis-I Diode, Q'Laze Nd:YAG Laser, and Fractional CO2 Laser—with strict clinical hygiene protocols.</p>
+        <div class="hotline-pills">
+          <span class="hotline-pill">📞 9988443959</span>
+          <span class="hotline-pill">📞 9988443818</span>
+          <span class="hotline-pill">📍 Near Puneeth Rajkumar Circle, Hospet</span>
+        </div>
+      </div>
+      <div>
+        <a href="#book" class="btn-main" style="background:#fff; color:var(--primary-green); font-size:1rem; padding:14px 28px;">Book Consultation</a>
+      </div>
+    </section>
+
+    <!-- Hygiene & Safety Highlights -->
+    <div class="hygiene-badge-strip">
+      <div class="hygiene-pill-card">
+        <div class="hygiene-icon">🧼</div>
+        <div>
+          <h5>Class-A Sterilization</h5>
+          <p>Medical autoclaving of all surgical instruments after every single procedure.</p>
+        </div>
+      </div>
+      <div class="hygiene-pill-card">
+        <div class="hygiene-icon">💨</div>
+        <div>
+          <h5>HEPA Air Filtration</h5>
+          <p>Continuous clinical clean-air circulation across all consultation & laser rooms.</p>
+        </div>
+      </div>
+      <div class="hygiene-pill-card">
+        <div class="hygiene-icon">🛡️</div>
+        <div>
+          <h5>Single-Use Consumables</h5>
+          <p>Disposable laser tips, sterile micro-needling cartridges & protective barrier drapes.</p>
+        </div>
+      </div>
+      <div class="hygiene-pill-card">
+        <div class="hygiene-icon">🏥</div>
+        <div>
+          <h5>Hospital-Grade OT</h5>
+          <p>Dedicated minor surgical theatre designed for excision, biopsies & scar reconstruction.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specialized Treatments -->
+    <section id="services">
+      <span class="section-tag">Clinical Laser & Aesthetic Portfolio</span>
+      <h3 class="section-heading">Advanced Solutions for Skin & Scalp</h3>
+      <p class="section-subtitle">Scientifically validated laser treatments tailored to Indian skin tones under certified dermatological care.</p>
+      <div id="treatmentsContainer" class="services-grid"></div>
+    </section>
+
+    <!-- Hospital Premises & Infrastructure -->
+    <section id="premises">
+      <span class="section-tag">Hospital Environment & Standards</span>
+      <h3 class="section-heading">State-of-the-Art Infrastructure</h3>
+      <p class="section-subtitle">Every inch of our clinic is engineered for patient comfort, medical safety, and clinical sterility.</p>
+      <div id="premisesContainer" class="facility-grid"></div>
+    </section>
+
+    <!-- Documented Results -->
+    <section id="results">
+      <span class="section-tag">Documented Transformations</span>
+      <h3 class="section-heading">Clinical Case Outcomes</h3>
+      <p class="section-subtitle">Real results from completed laser and skin care cycles at Sri Sai Clinic.</p>
+      <div id="resultsContainer" class="results-grid"></div>
+    </section>
+
+    <!-- Doctors & Specialists -->
+    <section id="doctors">
+      <span class="section-tag">Qualified Medical Practitioners</span>
+      <h3 class="section-heading">Meet Our Chief Specialists</h3>
+      <p class="section-subtitle">Direct consultations, transparent diagnoses, and customized prescriptions.</p>
+      <div id="doctorsContainer" class="doctors-list"></div>
+    </section>
+
+    <!-- Simplified Booking Form Section -->
+    <section id="book" class="booking-section">
+      <div id="bookingClosedNotice" class="booking-closed-banner">
+        ⚠️ Online intake is temporarily closed by the clinic reception desk. For urgent queries, please call: 9988443959 / 9988443818.
+      </div>
+
+      <div id="bookingFormWrapper">
+        <span class="section-tag" style="color:#d1fae5; text-align: left;">Direct Intake</span>
+        <h3 style="font-family:var(--font-serif); font-size:1.8rem; margin-bottom:8px;">Schedule Your Clinic Appointment</h3>
+        <p style="color:#d4e5d8; font-size:0.9rem; margin-bottom:24px;">Submit your consultation request. Our receptionist will assign your exact appointment time.</p>
+
+        <form id="publicBookingForm" class="booking-form">
+          <div class="form-group">
+            <label>Patient Full Name</label>
+            <input type="text" id="pName" required placeholder="Full Name" />
+          </div>
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="pAge" required placeholder="e.g. 27" min="1" max="110" />
+          </div>
+          <div class="form-group">
+            <label>Concern Category</label>
+            <select id="pTreatment" required>
+              <option value="Skin Concern">Skin Concern</option>
+              <option value="Hair Concern">Hair Concern</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>City / Area</label>
+            <input type="text" id="pPlace" required placeholder="e.g. Patil Nagar, Hospet" />
+          </div>
+          <button type="submit" class="btn-submit">Submit Consultation Request</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Clinic Address & Contact Footer -->
+    <footer id="location" style="background:#fff; border:1px solid var(--border-color); border-radius:8px; padding:32px; display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+      <div>
+        <h4 style="font-family:var(--font-serif); color:var(--primary-green); margin-bottom:8px;">Sri Sai Skin & Hair Clinic</h4>
+        <p style="font-size:0.88rem; color:var(--text-muted);">Station Road, Near Puneeth Rajkumar Circle,<br>Adjacent to Ashwini Hospital, Patil Nagar,<br>Hosapete, Karnataka - 583201</p>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-serif); color:var(--primary-green); margin-bottom:8px;">Appointments & Enquiries</h4>
+        <p style="font-size:0.88rem; color:var(--text-muted);"><strong>Phone:</strong> 9988443959 / 9988443818</p>
+        <p style="font-size:0.88rem; color:var(--text-muted); margin-top:4px;"><strong>Consultation Timings:</strong><br>Morning: 10:00 AM – 1:00 PM<br>Evening: 5:00 PM – 8:00 PM</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

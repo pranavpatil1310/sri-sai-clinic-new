@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Receptionist Desk - Sri Sai Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="receptionist-page">
+
+  <div class="role-nav">
+    <span><strong>Active View:</strong> Receptionist Operations Desk</span>
+    <div class="role-links">
+      <a href="index.html">Patient Site</a>
+      <a href="receptionist.html" class="active">Receptionist</a>
+      <a href="doctor.html">Doctor Portal</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; background:#fff; padding:18px 24px; border:1px solid var(--border-color); border-radius:8px; margin-bottom:24px; flex-wrap:wrap; gap:12px;">
+      <div>
+        <h3 style="font-family:var(--font-serif); font-size:1.25rem;">Doctor Intake Availability</h3>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin:0;">Toggle to pause or open online patient appointments on the website.</p>
+      </div>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <span id="availabilityBadge" class="badge badge-confirmed">Intake Open</span>
+        <button id="toggleAvailabilityBtn" class="btn-main" style="padding:8px 16px; font-size:0.85rem; background:#dc2626;">Pause Bookings</button>
+        <button id="openWalkinModalBtn" class="btn-outline" style="padding:8px 16px; font-size:0.85rem;">+ Direct Walk-In</button>
+      </div>
+    </div>
+
+    <div class="portal-card">
+      <h3 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:4px;">Patient Appointment Requests</h3>
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:20px;">Assign exact consultation time slots to forward patients to the doctor's queue.</p>
+
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Patient Details</th>
+              <th>Consultant & Service</th>
+              <th>Locality</th>
+              <th>Assigned Slot</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="receptionistTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time Slot Modal -->
+  <div id="slotModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeSlotModal()">&times;</button>
+      <h3 style="font-family:var(--font-serif); margin-bottom:12px;">Assign Consultation Slot</h3>
+      <input type="hidden" id="slotAptId" />
+      <div class="form-group" style="margin-bottom:20px;">
+        <label style="color:#333; margin-bottom:6px;">Select Consultation Time Slot</label>
+        <select id="assignedTimeSlot" style="width:100%; padding:10px; border-radius:4px; border:1px solid #ccc;">
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="10:30 AM">10:30 AM</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="11:30 AM">11:30 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="12:30 PM">12:30 PM</option>
+          <option value="05:00 PM">05:00 PM</option>
+          <option value="05:30 PM">05:30 PM</option>
+          <option value="06:00 PM">06:00 PM</option>
+          <option value="06:30 PM">06:30 PM</option>
+          <option value="07:00 PM">07:00 PM</option>
+          <option value="07:30 PM">07:30 PM</option>
+        </select>
+      </div>
+      <button onclick="confirmAppointmentWithSlot()" class="btn-main" style="width:100%;">Confirm Slot & Send to Doctor</button>
+    </div>
+  </div>
+
+  <!-- Walk-in Modal -->
+  <div id="walkinModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeWalkinModal()">&times;</button>
+      <h3 style="font-family:var(--font-serif); margin-bottom:16px;">Direct Walk-in Patient Entry</h3>
+      <form id="walkinForm" class="booking-form">
+        <div class="form-group">
+          <label style="color:#333;">Patient Name</label>
+          <input type="text" id="wName" required />
+        </div>
+        <div class="form-group">
+          <label style="color:#333;">Phone Number</label>
+          <input type="tel" id="wPhone" required />
+        </div>
+        <div class="form-group">
+          <label style="color:#333;">Age</label>
+          <input type="number" id="wAge" required />
+        </div>
+        <div class="form-group">
+          <label style="color:#333;">Treatment</label>
+          <input type="text" id="wTreatment" required placeholder="e.g. Wart Excision" />
+        </div>
+        <div class="form-group full">
+          <label style="color:#333;">Locality</label>
+          <input type="text" id="wPlace" required placeholder="e.g. Hospet" />
+        </div>
+        <div class="form-group full">
+          <label style="color:#333;">Immediate Consultation Slot</label>
+          <input type="text" id="wSlot" value="Walk-in / Immediate" />
+        </div>
+        <button type="submit" class="btn-submit" style="background:var(--primary-green); color:#fff;">Confirm Entry</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
